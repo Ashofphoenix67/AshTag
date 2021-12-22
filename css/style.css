@@ -30,6 +30,50 @@ p{
 /*--banner--*/
 
 /*---*/
+del {
+    font: bold;
+    color: #000;
+    text-decoration: line-through;
+    /*background-color: rgb(214, 157, 157);*/
+    text-decoration-style: wavy;
+    text-decoration-color: red; 
+}
+#button {
+    display: inline-block;
+    background-color: #e74c3c;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 30px;
+    color: #fff;
+}
 nav a {
 	position: relative;
 	display: inline-block;
@@ -64,31 +108,31 @@ nav a:focus {
     -ms-transition: 0.5s all;
 	 border-radius: 6px 6px 5px 10px;
 }
-.social-icons i.icon:hover {
+.social-icons i.icon1 {
+    background-position: 0px 0px;
+}
+.social-icons i.icon1:hover {
   background: #34495e   url(../images/img-sprite.png) no-repeat 0px 0px;
       transform: rotateY(360deg);
 }
-.social-icons i.icon {
-    background-position: 0px 0px;
-}
-.social-icons i.icon1 {
+.social-icons i.icon2 {
     background-position: -32px 0px;
 }
-.social-icons i.icon1:hover {
+.social-icons i.icon2:hover {
   background: #34495e   url(../images/img-sprite.png) no-repeat -32px 0px;
       transform: rotateY(360deg);
 }
-.social-icons i.icon2 {
+.social-icons i.icon3 {
     background-position: -64px 0px;
 }
-.social-icons i.icon2:hover {
+.social-icons i.icon3:hover {
   background: #34495e   url(../images/img-sprite.png) no-repeat -64px 0px;
       transform: rotateY(360deg);
 }
-.social-icons i.icon3 {
+.social-icons i.icon4 {
     background-position: -96px 0px;
 }
-.social-icons i.icon3:hover {
+.social-icons i.icon4:hover {
   background: #34495e   url(../images/img-sprite.png) no-repeat -96px 0px;
       transform: rotateY(360deg);
 }
@@ -752,7 +796,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .social{
 	text-align:center;
-	    margin-top: 1em;
+	margin-top: 1em;
 }
 .social a i {
     width: 32px;
@@ -767,33 +811,33 @@ ul.callbacks_tabs.callbacks1_tabs {
     -ms-transition: 0.5s all;
 	 border-radius: 6px 6px 5px 10px;
 }
-.social i.icon:hover {
-  background: #34495e url(../images/img-sprite.png) no-repeat 0px 0px;
-      transform: rotateY(360deg);
-}
-.social i.icon {
+.social i.icon1 {
     background-position: 0px 0px;
 }
-.sociali.icon1 {
-    background-position: -32px 0px;
-}
 .social i.icon1:hover {
-  background: #34495e url(../images/img-sprite.png) no-repeat -32px 0px;
-      transform: rotateY(360deg);
+  background: #34495e url(../images/img-sprite.png) no-repeat 0px 0px;
+      transform: rotateX(360deg);
 }
 .social i.icon2 {
-    background-position: -64px 0px;
+    background-position: -32px 0px;
 }
 .social i.icon2:hover {
-  background: #34495e url(../images/img-sprite.png) no-repeat -64px 0px;
-      transform: rotateY(360deg);
+  background: #34495e url(../images/img-sprite.png) no-repeat -32px 0px;
+      transform: rotateX(360deg);
 }
 .social i.icon3 {
-    background-position: -96px 0px;
+    background-position: -64px 0px;
 }
 .social i.icon3:hover {
+  background: #34495e url(../images/img-sprite.png) no-repeat -64px 0px;
+      transform: rotateX(360deg);
+}
+.social i.icon4 {
+    background-position: -96px 0px;
+}
+.social i.icon4:hover {
   background: #34495e url(../images/img-sprite.png) no-repeat -96px 0px;
-      transform: rotateY(360deg);
+      transform: rotateX(360deg);
 }
 h3.tittle1 {
     color: #fff;

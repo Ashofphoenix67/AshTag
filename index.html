@@ -11,6 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<title>AshTag</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<!--css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
@@ -54,6 +55,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			$('.filtr-container').filterizr();
 		});
 	</script>
+	<script>
+		jQuery(document).ready(function() {
+		  
+		  var btn = $('#button');
+		
+		  $(window).scroll(function() {
+			if ($(window).scrollTop() > 300) {
+			  btn.addClass('show');
+			} else {
+			  btn.removeClass('show');
+			}
+		  });
+		
+		  btn.on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({scrollTop:0}, '300');
+		  });
+		
+		});
+	</script>
+		
 	<!--gallery-->
 	<!--startsmothscrolling-->
 	<script type="text/javascript" src="js/move-top.js"></script>
@@ -76,22 +98,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
+	<a id="button"></a>
 	<!--header-->
 	<div class="header" id="home">
 		<div class="header-top">
 			<div class="container">
 				<div class="social-icons">
-					<a href="https://facebook.com/ashtag67/" target="_blank"><i class="icon"></i></a>
-					<a href="https://twitter.com/ashtag67"><i class="icon1"></i></a>
-					<!-- <a href="#"><i class="icon2"></i></a>
-						<a href="#"><i class="icon3"></i></a> -->
+					<a href="https://facebook.com/ashtag67" target="_blank"><i class="icon1"></i></a>
+					<a href="https://twitter.com/ashtag67"><i class="icon2"></i></a>
+					<!-- <a href="#"><i class="icon3"></i></a>
+					<a href="#"><i class="icon4"></i></a> -->
 				</div>
-				<div class="detail">
+				<!-- <div class="detail">
 					<ul>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> +33 TBD</li>
 						<li><i class="glyphicon glyphicon-time" aria-hidden="true"></i> 7/7 9:00 - 19:00</li>
 					</ul>
-				</div>
+				</div> -->
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -207,18 +230,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="wel-left">
 						<h4>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+</h4>
 						<h5>Guitare</h5>
-						<p>Il faut toujours une guitare dans un groupe ! ça fait trop classe !</p>
+						<p>Il faut toujours une guitare dans un groupe ! Ça fait trop classe !</p>
 					</div>
 					<div class="wel-left">
 						<h4>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=</h4>
 						<h5>Basse</h5>
-						<p>Pour rajouter des notes aléatoires. En plus, ça peut couvrir les fausses notes de la guitare
+						<p>Pour rajouter des notes aléatoires. Ça permet également de couvrir les fausses notes de la guitare
 							!</p>
 					</div>
 					<div class="wel-left">
 						<h4>3</h4>
 						<h5>Micros</h5>
-						<p>Oui, on s'est dit que quelqu'un en plus pour chanter, ça donnerait un truc sympa</p>
+						<p>Oui, on s'est dit que quelqu'un en plus pour chanter, ça donnerait un truc sympa !</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -232,29 +255,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--Biography-->
 		<div class="biography-w3agile" id="biography">
 			<div class="container">
-				<h3 class="tittle1">Biography</h3>
+				<h3 class="tittle1">Biographie</h3>
 				<div class="border1"></div>
 				<div class="biography-grids">
 					<div class="col-md-4 biography-grid">
 						<img src="images/ashtag.png" class="img-responsive" alt="" />
 					</div>
 					<div class="col-md-8 biography-grid">
-						<h4>Who are we?</h4>
-						<p>Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula
-							lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing metus sit amet. In eu
-							justo a felis faucibus ornare vel id metus. Sed hendrerit enim non justo posuere placerat.
-							Phasellus eget purus vel mauris tincidunt tincidunt. Sed et nibh tortor faucibus
-							pellentesque facilisis.</p>
-						<ul>
-							<li>Nam convallis non eros curabitur.</li>
-							<li> Donec vehicula suscipit oasselus.</li>
-							<li>Accumasan mauris tellus feugiat.</li>
-							<li>Sed hendrerit enim non justo.</li>
-							<li>Nam convallis non eros curabitur.</li>
-							<li>Nam convallis non eros curabitur.</li>
-							<li> Donec vehicula suscipit oasselus.</li>
-							<li>Accumasan mauris tellus feugiat.</li>
-						</ul>
+						<h4>Qui sommes-nous ?</h4>
+						<p>Le concept AshTag, c'est tout d'abord Ash qui se dit que finalement, Tant qu'on est en France, les textes en français ont de grandes chances d'être bien compris ! Il découvre des Guitare-Héros comme Oldelaf ou encore Alex & sa guitare qui transmettent une bonne humeur par leurs chansons chargées d'humour et d'amour et commence à gratter quelques accords pour leurs rendre hommage...</p>
+						<p>Mais bon, tout seul c'est bof bof, alors un jour, il va trouver son épouse, lui enlève ses aiguilles à tricoter des mains et les remplace par une U-basse ! Des notes graves apparaissent et là, ça commence à sonner doucement !</p>
+						<p>Il manquait encore quelque chose... Alors il va trouver son amie, lui enlève son appareil photo des mains et le remplace par un micro ! Ah ben voilà ! Une troisième voix, ça claque !</p>
+						<p>Génial ! Le concept est là ! Allons faire partager cet univers sympathoche !</p>
 						<div class="clearfix"></div>
 					</div>
 					<div class="clearfix"></div>
@@ -262,11 +274,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 		<!--/Biography-->
-
 		<!--artists-->
 		<div class="artists-agileits" id="artists">
 			<div class="container">
-				<h3 class="tittle">Artists</h3>
+				<h3 class="tittle">Le Groupe</h3>
 				<div class="border"></div>
 				<div class="slider">
 					<div class="callbacks_container">
@@ -274,68 +285,68 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li>
 								<div class="caption">
 									<div class="col-md-4 cap-left">
-										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal3"><img
-												src="images/a3.jpg" class="img-responsive" alt="" /></a>
-										<h4>Anderson</h4>
-										<h5>Director, ABC</h5>
-									</div>
-									<div class="col-md-4 cap-left">
 										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1"><img
 												src="images/a1.jpg" class="img-responsive" alt="" /></a>
-										<h4>John Thomson</h4>
-										<h5>Director, ABC</h5>
+										<h4>Ash</h4>
+										<h5>Le Taulier</h5>
 									</div>
 									<div class="col-md-4 cap-left">
 										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal2"><img
 												src="images/a2.jpg" class="img-responsive" alt="" /></a>
-										<h4>Mary Doe</h4>
-										<h5>Director, ABC</h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</li>
-							<li>
-								<div class="caption">
-									<div class="col-md-4 cap-left">
-										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal4"><img
-												src="images/a4.jpg" class="img-responsive" alt="" /></a>
-										<h4>Eva Adamson</h4>
-										<h5>Director, ABC</h5>
-									</div>
-									<div class="col-md-4 cap-left">
-										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal5"><img
-												src="images/a5.jpg" class="img-responsive" alt="" /></a>
-										<h4>Tompson</h4>
-										<h5>Director, ABC</h5>
+										<h4>Emma</h4>
+										<h5>La Bassiste</h5>
 									</div>
 									<div class="col-md-4 cap-left">
 										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal3"><img
 												src="images/a3.jpg" class="img-responsive" alt="" /></a>
-										<h4>Anderson</h4>
-										<h5>Director, ABC</h5>
+										<h4>Zazoo</h4>
+										<h5>La Choeuriste</h5>
 									</div>
 									<div class="clearfix"></div>
 								</div>
 							</li>
 							<li>
 								<div class="caption">
+									<div class="col-md-4 cap-left">
+										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal2"><img
+												src="images/a2.jpg" class="img-responsive" alt="" /></a>
+										<h4>Emma</h4>
+										<h5>La Bassiste</h5>
+									</div>
+									<div class="col-md-4 cap-left">
+										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal3"><img
+												src="images/a3.jpg" class="img-responsive" alt="" /></a>
+										<h4>Zazoo</h4>
+										<h5>La Choeuriste</h5>
+									</div>
 									<div class="col-md-4 cap-left">
 										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1"><img
 												src="images/a1.jpg" class="img-responsive" alt="" /></a>
-										<h4>John Thomson</h4>
-										<h5>Director, ABC</h5>
+										<h4>Ash</h4>
+										<h5>Le Taulier</h5>
 									</div>
+									<div class="clearfix"></div>
+								</div>
+							</li>
+							<li>
+								<div class="caption">
 									<div class="col-md-4 cap-left">
 										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal3"><img
 												src="images/a3.jpg" class="img-responsive" alt="" /></a>
-										<h4>Anderson</h4>
-										<h5>Director, ABC</h5>
+										<h4>Zazoo</h4>
+										<h5>La Choeuriste</h5>
 									</div>
 									<div class="col-md-4 cap-left">
-										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal5"><img
-												src="images/a5.jpg" class="img-responsive" alt="" /></a>
-										<h4>Tompson</h4>
-										<h5>Director, ABC</h5>
+										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1"><img
+												src="images/a1.jpg" class="img-responsive" alt="" /></a>
+										<h4>Ash</h4>
+										<h5>Le Taulier</h5>
+									</div>
+									<div class="col-md-4 cap-left">
+										<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal2"><img
+												src="images/a2.jpg" class="img-responsive" alt="" /></a>
+										<h4>Emma</h4>
+										<h5>La Bassiste</h5>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -574,7 +585,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--/content-->
 
 	<!--contact-->
-	<div id="contact" class="contact">
+	<!-- <div class="contact">
 		<div class="container">
 			<h3 class="tittle">Contact</h3>
 			<div class="border"></div>
@@ -583,28 +594,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17299.921306187603!2d-75.1843998732286!3d39.95876849875875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c633447a34f5%3A0x4750cc087dfd9c7d!2sMusic+Branch!5e0!3m2!1sen!2sin!4v1463123494512"
 				allowfullscreen></iframe>
-		</div>
-	</div>
+		</div> 
+	</div> -->
 	<!-- //get-in -->
 	<!-- contact-us -->
-	<div class="contact-us">
+	<div id="contact" class="contact-us">
 		<div class="container">
 			<div class="contact-grids">
 				<div class="col-md-4 contact-grid text-center">
 					<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-					<p><a href="mail-to:example@mail.com">Email : example@mail.com</a></p>
+					<p><a href="mail-to:ashtag.group@gmail.com">Email : ashtag.group@gmail.com</a></p>
 				</div>
 				<div class="col-md-4 contact-grid text-center">
 					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-					<p>Jl. Pahlawan VII No.247-D Sidoarjo-Surabaya-Indonesia</p>
+					<p>Association Sunnox<br>20 rue des Tilleuls<br>67720 Hoerdt</p>
 				</div>
 				<div class="col-md-4 contact-grid text-center">
 					<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-					<p>Telephone : +613 0000 0000</p>
+					<p>Telephone : +33 TBD</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div class="contact-info">
+			<!-- <div class="contact-info">
 				<form action="#" method="post">
 					<input type="text" name="Name" placeholder="Your Name" required>
 					<input type="text" name="Email" placeholder="Your Email" required>
@@ -612,7 +623,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<textarea placeholder="Your Message" name="Message" required></textarea>
 					<input type="submit" value="SEND MESSAGE">
 				</form>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -620,11 +631,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="copy-section">
 		<div class="container">
 			<div class="footer-top">
-				<p>&copy; 2016 Music Max. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a>
+				<p>&copy; 2021 Sunnox. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a>
 				</p>
 			</div>
-			<a href="#home" class="scroll top"><span class="glyphicon glyphicon-chevron-up"
-					aria-hidden="true"></span></a>
+			<!--<a href="#home" class="scroll top"><span class="glyphicon glyphicon-chevron-up"
+					aria-hidden="true"></span></a> -->
 		</div>
 	</div>
 	<!--footer-->
@@ -639,17 +650,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="modal-body">
 					<div class="news-gr">
 						<img src="images/a1.jpg" class="img-responsive" alt="" />
-						<h4>John Thomson</h4>
+						<h4>Ash</h4>
 						<div class="social">
-							<a href="#"><i class="icon"></i></a>
 							<a href="#"><i class="icon1"></i></a>
 							<a href="#"><i class="icon2"></i></a>
-							<a href="#"><i class="icon3"></i></a>
+							<!-- <a href="#"><i class="icon3"></i></a>
+							<a href="#"><i class="icon4"></i></a> -->
+						
+							<p>Guitariste explétif du groupe et autodidacte pas	entièrement fini, il lui arrive même d’oublier les paroles !! Mais ceci reste cependant 199 % « Humain » et compréhensible (oui le français aide).</p>
 						</div>
-						<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris.
-							Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium,
-							placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas
-							ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
 					</div>
 				</div>
 			</div>
@@ -665,17 +674,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="modal-body">
 					<div class="news-gr">
 						<img src="images/a2.jpg" class="img-responsive" alt="" />
-						<h4>John Thomson</h4>
+						<h4>Emma</h4>
 						<div class="social">
-							<a href="#"><i class="icon"></i></a>
 							<a href="#"><i class="icon1"></i></a>
 							<a href="#"><i class="icon2"></i></a>
 							<a href="#"><i class="icon3"></i></a>
+							<!-- <a href="#"><i class="icon4"></i></a> -->
+											
+							<p>Dans la vraie vie, c’est la douce épouse de Ash. Forte
+								d’un CDD de <del>stagiaire</del> bassiste au sein du groupe,
+								elle apporte -tout comme le taulier- une touche
+								d’imprévue musicale car à une case près, on entend la
+								chanson autrement...</p>
 						</div>
-						<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris.
-							Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium,
-							placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas
-							ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
 					</div>
 				</div>
 			</div>
@@ -691,74 +702,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="modal-body">
 					<div class="news-gr">
 						<img src="images/a3.jpg" class="img-responsive" alt="" />
-						<h4>John Thomson</h4>
+						<h4>Zazoo</h4>
 						<div class="social">
-							<a href="#"><i class="icon"></i></a>
 							<a href="#"><i class="icon1"></i></a>
 							<a href="#"><i class="icon2"></i></a>
 							<a href="#"><i class="icon3"></i></a>
+							<!-- <a href="#"><i class="icon4"></i></a> -->
+													
+							<p>Après d’innombrables auditions, elle fût <del>la seule à
+								être venue</del> retenue pour poser sa voix sur des
+								phrases pour que ça en jette vachement mieux et
+								que ça fasse pro. Bon par contre, on n’est pas
+								absolument sur que ce soit du français...</p>
 						</div>
-						<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris.
-							Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium,
-							placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas
-							ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content modal-info">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-							aria-hidden="true">&times;</span></button>
-				</div>
-				<div class="modal-body">
-					<div class="news-gr">
-						<img src="images/a4.jpg" class="img-responsive" alt="" />
-						<h4>John Thomson</h4>
-						<div class="social">
-							<a href="#"><i class="icon"></i></a>
-							<a href="#"><i class="icon1"></i></a>
-							<a href="#"><i class="icon2"></i></a>
-							<a href="#"><i class="icon3"></i></a>
-						</div>
-						<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris.
-							Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium,
-							placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas
-							ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="myModal5" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content modal-info">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-							aria-hidden="true">&times;</span></button>
-				</div>
-				<div class="modal-body">
-					<div class="news-gr">
-						<img src="images/a5.jpg" class="img-responsive" alt="" />
-						<h4>John Thomson</h4>
-						<div class="social">
-							<a href="#"><i class="icon"></i></a>
-							<a href="#"><i class="icon1"></i></a>
-							<a href="#"><i class="icon2"></i></a>
-							<a href="#"><i class="icon3"></i></a>
-						</div>
-						<p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris.
-							Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium,
-							placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel ermentum pretium. Maecenas
-							ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 </body>
 
 </html>
