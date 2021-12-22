@@ -4,7 +4,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Nova Round', cursive;
 }
 body a{
 	transition: 0.5s all;
